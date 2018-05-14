@@ -12,12 +12,13 @@
     "access": "public"
   },
   "scripts": {
-    "test": "echo \"Dummy test\" && exit 0"
+    "test": "echo \"Dummy test\" && exit 0",
+    "version": "git add .",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mocha": "^5.1.1"
   }
 }

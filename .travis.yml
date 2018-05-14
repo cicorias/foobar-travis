@@ -1,11 +1,22 @@
 language: node_js
 node_js:
-  - 8
-  
+- 8
 deploy:
-  provider: npm
+- provider: script
+  skip_cleanup: true
+  script: sh .travis/pu.sh
+  on:
+    branch: master
+    tags: false
+    node: 8
+    repo: cicorias/foobar-travis
+- provider: npm
   email: github@cicoria.com
   api_key:
     secure: lefiMm68spOfA1YPXJLUlnp4cP75Wx2ShtG7kKXC6/nIwRHnUqG1YBaCM16MlmJdMCNAuXmiDq6MHFFIWypRU9OYyPweXL/IVo0tAms11InYMcW5dAmGA/U0yOmPO9pURt5etXHhav/J4uwo4M1RftxmeE4qKJiaIbJw4OsBpehoiDG5LB5VvLRucK4pkCRs5lcYHGsausAU58EWBrQeeEjMXmvXKjPaZWSJ5kCMaiBCmPVrx/Wjkkoyv17cDDgX1WtNZD02ilw7jrPs/QdzR+CEyKGofBLWOW2Jmz4848FSvcAzxL8ls3oRcxsTvQQbIVzHuhN3sTOChU3g2X3RsXPbmR6LVASEKx3cWhbGMh0IxTHtVVsbhYIFfDaXccfTwPIEatiR4pe8mzt/g7PlsDL51C8yecfR0OA6gktEBcd9/PUix3nOfit6YvnRijlcxp/bXzDtAmSoU9TH/IB8bxyjUcouVG57FN7FMKfPqbMu6WgC/f2CXPHfhF6TtCaATByV9t5cb/oEBFvtf5WSztLj13UfQ7Ju5Kwu/6WRpIz3TQWrxa6JAuRMO8s3tGlrkktXNccH7tGJ/gH9HwPX3ssoX9ZUlal5VwVW4cFEh/JcSQC7gKbTEtlcxjeH2wp9Qzc9mjpgd27pF5+Zyhn98ZpSDM1MpwEp4pApVYKlXmA=
   on:
-    repo: cicorias/foobar-travis
+    branch: master
+    tags: false
+env:
+  global:
+    secure: RONUXLwJNi3acM1DOSDbtz0eGy5M9mSENql9zufK20UIlsCSEC9PnHo6u69GVnB6uJv8T4+/GZ6p5OiFvtYNS89iLYL8DkRrvNheEd8gYYdLKHQrP6zRymDAVYcWsi/93u1BT2J4wweYvbzrGZg4T4uAJ8cH1vldb/m/bnEDg/9I8fWzZ+udKOL+mJhXWDc1Xgk32CukHabujLr27HUskk8XydNrXxpHIJF/BOvKeNOM6UQq/8duhG8N+soPc03knvOB4RCQQWeTVxu5ucBUBtp8pGTs2afFT9cmNPSX2G8EdmOtd8399aFhr9lUTC3TLUyOg5ARU/N6r1s/pqw8kPBCGrLqj0lPrQooDo2Zc9amP1JZM/Tcn8niaEfXiDRQHYeCKHTcNeiFXBAWBMOumGqAIDmP7TNg/cfv418bcE4PKfE7xGle4hXgMKkxFqsphhM8okEUsKThVR4TcI13mFm4lU21NxCOtRyYKftQhUsJ6yA4lkUWZK+boYdksqiKkUrLv4nnLdxAlMdGAfV6Nmbls+7ezFhTmVGtCLd/Uqsr/YO6Pt01BUZF37VGVAtx52ZfrDWRE4lWCjnycszEyH+CFwSFYHicZx0T/pjY0eRTjKkqHTHmDRQBGapRz6ItUuQhEios4wlAxS/zWfvPS82nYdVPyg3bs5HU5G1aWRA=
