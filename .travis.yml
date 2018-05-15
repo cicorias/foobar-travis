@@ -17,6 +17,18 @@ deploy:
   on:
     branch: master
     tags: false
+    node: 8
+    repo: cicorias/foobar-travis
+- provider: releases
+  api_key:
+    secure: VokoR+PFmLv6zC8AFduIezwHCPYGVRgXX+KpM0dZ9HrhStyb3G6Qc214OHGuWOegzNzBxJq0hvAMaEvdkM8SIcziXCluUFjPSNfdgzTrjMNUX30GQMqoBnYAsUBc9D01UjUt1qu6xhL1W7FapMqP3ZGq5PyOZkrAgcOC2hGYvF4lR4pgJptvkXp2QXdHKfaOJ6eVcrMcJtFKAIncJ7znU77/0+uQqGIrRff/eOW/h+XdCo0f6wqVb8Ml/uqbyYJKM+1Mnc6D2GkhoIiSqy3NPg+C4tVjQVz4XDKeZI8zFeJ2/s76ZNfixYn3U0f0QFxH+KjTSB4oz/bIEEUn49rsDq/sZ1C3NiM7DLkllPJ/lBWG8biTvDxmiweYH1EJVn9q2zriCqJUq59YWb1KqqV++Mzg/jVkIJwt2Qfi0On109lG+OtWbT6vacPItHbeVWaW+OET3CIwva/D6XWGliddZ/mat61i0ZgWngFoHDUOhsOnoo/lpJXrpwa/8CFQemoZsFN5xeGHFeK2QVyjzPDy5Ox2lABHYKRuNdO4n4C54sfVGKG2b98a4WTemcXYs1PHzs4Aj6GLvygLj69xQ9/JtL37O3UOONi8536sfwLVdRou3zMKYcuERCc69/I7cC0Bj1vTKfYXL6QFDgOab7+vueFE4UnyS/x6Qci1ZagcCoQ=
+  file_glob: true
+  file: directory/*
+  on:
+    branch: master
+    tags: false
+    node: 8
+    repo: cicorias/foobar-travis
 env:
   global:
     secure: RONUXLwJNi3acM1DOSDbtz0eGy5M9mSENql9zufK20UIlsCSEC9PnHo6u69GVnB6uJv8T4+/GZ6p5OiFvtYNS89iLYL8DkRrvNheEd8gYYdLKHQrP6zRymDAVYcWsi/93u1BT2J4wweYvbzrGZg4T4uAJ8cH1vldb/m/bnEDg/9I8fWzZ+udKOL+mJhXWDc1Xgk32CukHabujLr27HUskk8XydNrXxpHIJF/BOvKeNOM6UQq/8duhG8N+soPc03knvOB4RCQQWeTVxu5ucBUBtp8pGTs2afFT9cmNPSX2G8EdmOtd8399aFhr9lUTC3TLUyOg5ARU/N6r1s/pqw8kPBCGrLqj0lPrQooDo2Zc9amP1JZM/Tcn8niaEfXiDRQHYeCKHTcNeiFXBAWBMOumGqAIDmP7TNg/cfv418bcE4PKfE7xGle4hXgMKkxFqsphhM8okEUsKThVR4TcI13mFm4lU21NxCOtRyYKftQhUsJ6yA4lkUWZK+boYdksqiKkUrLv4nnLdxAlMdGAfV6Nmbls+7ezFhTmVGtCLd/Uqsr/YO6Pt01BUZF37VGVAtx52ZfrDWRE4lWCjnycszEyH+CFwSFYHicZx0T/pjY0eRTjKkqHTHmDRQBGapRz6ItUuQhEios4wlAxS/zWfvPS82nYdVPyg3bs5HU5G1aWRA=
